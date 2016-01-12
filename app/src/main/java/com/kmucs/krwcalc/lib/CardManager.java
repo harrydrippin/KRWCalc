@@ -18,9 +18,9 @@ public class CardManager {
         dbManager = new DBManager(mContext, "Card.db", null, 1);
     }
 
-    public void makeCard(String mCardName, CardCompany mCardCompany, NetCompany mNetCompany, SpecialCard mSpecialCard) {
+    public void makeCard(String mCardName, CardCompany mCardCompany, NetCompany mNetCompany, SpecialCard mSpecialCard, int mCheck) {
         try {
-            dbManager.query("INSERT INTO Card VALUES (, " + mCardName + ", " + mCardCompany + ", " + mNetCompany + ", " + mSpecialCard.toString());
+            dbManager.query("INSERT INTO Card VALUES (, " + mCardName + ", " + mCardCompany + ", " + mNetCompany + ", " + mSpecialCard.toString() + ", " + mCheck + ")");
         } catch(Exception e) {
             Log.e("KRWCalcDB", "Making Card Error");
         }
