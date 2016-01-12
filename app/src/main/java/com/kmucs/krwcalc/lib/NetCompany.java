@@ -5,5 +5,5 @@ package com.kmucs.krwcalc.lib;
  * @author Seunghwan Hong
  */
 public enum NetCompany {
-    MASTER, VISA, AMEX, JCB, URS, UNIONPAY, BCGLOBAL
+    MASTER, VISA, AMEX, JCB, UNIONPAY, BCGLOBAL
 }

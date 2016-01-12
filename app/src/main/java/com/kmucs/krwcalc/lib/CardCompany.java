@@ -5,5 +5,5 @@ package com.kmucs.krwcalc.lib;
  * @author Seunghwan Hong
  */
 public enum CardCompany {
-    SHINHAN, HYUNDAI, SAMSUNG, LOTTE, KEB, KOOKMIN, HANA, WOORI, BC, NH
+    SHINHAN, HYUNDAI, SAMSUNG, LOTTE, KOOKMIN, HANA, WOORI, BC, NH
 }
