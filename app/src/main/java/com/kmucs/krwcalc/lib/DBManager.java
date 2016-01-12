@@ -36,7 +36,7 @@ public class DBManager extends SQLiteOpenHelper {
         }
     }
 
-    public String getCardData() {
+    public String getData() {
         try {
             SQLiteDatabase db = getReadableDatabase();
             String str = "";
