@@ -8,6 +8,24 @@ public class Card {
     public String name;
     public CardCompany cardCompany;
     public NetCompany netCompany;
+    public SpecialCard specialCard;
+    public int check;
+
+    public int getCheck() {
+        return check;
+    }
+
+    public void setCheck(int check) {
+        this.check = check;
+    }
+
+    public SpecialCard getSpecialCard() {
+        return specialCard;
+    }
+
+    public void setSpecialCard(SpecialCard specialCard) {
+        this.specialCard = specialCard;
+    }
 
     public String getName() {
         return name;
