@@ -18,7 +18,7 @@ public class DBManager extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-        db.execSQL("CREATE TABLE Card( _id INTEGER PRIMARY KEY AUTOINCREMENT, name TEXT, cardcompany INTEGER, netcompany INTEGER, special INTEGER);");
+        db.execSQL("CREATE TABLE Card( _id INTEGER PRIMARY KEY AUTOINCREMENT, name TEXT, cardcompany INTEGER, netcompany INTEGER, special INTEGER, check INTEGER);");
     }
 
     @Override

@@ -1,8 +1,9 @@
 package com.kmucs.krwcalc.lib;
 
 /**
- * Created by harryhong on 16. 1. 12..
+ * SpecialCard.java
+ * @author Seunghwan Hong
  */
 public enum SpecialCard {
-    HANA_VIVAG, HANA_GLOBALPAY, BC_GLOBALBC
+    HANA_VIVAG, HANA_GLOBALPAY, BC_GLOBALBC, NONE
 }
