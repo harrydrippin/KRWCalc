@@ -70,16 +70,6 @@
             android:layout_marginLeft="5dp"/>
     </LinearLayout>
 
-
-
-    <ListView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/listView"
-        android:layout_below="@+id/dotline_2"
-        android:layout_alignStart="@+id/total_background"
-        android:layout_above="@+id/total_background" />
-
     <EditText
         android:id="@+id/product_price"
         android:layout_width="wrap_content"
@@ -136,6 +126,14 @@
         android:id="@+id/textView3"
         android:layout_alignBottom="@+id/changed_price"
         android:layout_alignParentEnd="true" />
+
+    <ListView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/listView"
+        android:layout_below="@+id/dotline_2"
+        android:layout_alignStart="@+id/total_background"
+        android:layout_above="@+id/total_background" />
 
 
 </RelativeLayout>
