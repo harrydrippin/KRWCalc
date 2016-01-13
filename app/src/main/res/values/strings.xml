@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">수수료 계산기</string>
+    <string name="app_name">해외결제 계산기</string>
 
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>

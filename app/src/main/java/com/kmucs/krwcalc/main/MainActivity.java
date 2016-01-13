@@ -15,8 +15,6 @@ public class MainActivity extends AppCompatActivity {
 
         findViewById(R.id.dotline_1).setLayerType(View.LAYER_TYPE_SOFTWARE, null);
         findViewById(R.id.dotline_2).setLayerType(View.LAYER_TYPE_SOFTWARE, null);
-
-        
     }
 
 }
