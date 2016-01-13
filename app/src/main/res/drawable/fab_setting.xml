@@ -5,6 +5,5 @@
     android:width="24dp"
     android:viewportWidth="24"
     android:viewportHeight="24"
-    android:
     tools:targetApi="lollipop">
     </vector>
