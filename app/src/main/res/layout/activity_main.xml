@@ -119,13 +119,16 @@
         android:id="@+id/dotline_2"/>
 
     <android.support.design.widget.FloatingActionButton
-        android:id="@+id/myFAB"
+        android:id="@+id/main_fab"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/fb_setIcon"
-        app:elevation="4dp"/>
-
-
+        android:src="@drawable/fb_seticon"
+        app:elevation="4dp"
+        android:layout_above="@+id/result"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="20dp" />
+    
     <ListView
         android:id="@+id/listview_cardlist"
         android:layout_width="match_parent"
