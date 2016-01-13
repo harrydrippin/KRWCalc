@@ -32,84 +32,84 @@
 
 
     p<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/layout_process"
+    android:layout_below="@id/dotline_1"
+    android:orientation="vertical"
+    android:padding="15dp">
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/layout_process"
-        android:layout_below="@id/dotline_1"
-        android:orientation="vertical"
-        android:padding="15dp">
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/layout_input"
-            android:layout_gravity="center_vertical"
-            android:paddingLeft="20dp"
-            android:paddingRight="20dp">
+        android:id="@+id/layout_input"
+        android:layout_gravity="center_vertical"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp">
 
-            <EditText
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:hint="구매할 상품의 가격"
-                android:id="@+id/edit_price"
-                android:background="@android:color/transparent"
-                android:textSize="20sp"/>
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="구매할 상품의 가격"
+            android:id="@+id/edit_price"
+            android:background="@android:color/transparent"
+            android:textSize="20sp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/edit_price"
+            android:gravity="right"
+            android:layout_alignParentRight="true"
+            android:textColor="#000000"
+            android:text="달러(US)"
+            android:textSize="20sp"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/layout_output"
+        android:layout_marginTop="30dp"
+        android:layout_gravity="center_vertical"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="환율 변환값"
+            android:id="@+id/text_discount_title"
+            android:textColor="#000"
+            android:textSize="20sp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentStart="true" />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:id="@+id/layout_exchange"
+            android:layout_gravity="center_horizontal"
+            android:layout_alignParentRight="true">
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_toRightOf="@id/edit_price"
                 android:gravity="right"
-                android:layout_alignParentRight="true"
+                android:id="@+id/text_discount_price"
                 android:textColor="#000000"
-                android:text="달러(US)"
-                android:textSize="20sp"/>
-
-        </RelativeLayout>
-
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/layout_output"
-            android:layout_marginTop="30dp"
-            android:layout_gravity="center_vertical"
-            android:paddingLeft="20dp"
-            android:paddingRight="20dp">
+                android:text="1,000"
+                android:textSize="30sp"/>
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="환율 변환값"
-                android:id="@+id/text_discount_title"
-                android:textColor="#000"
-                android:textSize="20sp"
+                android:text="원"
+                android:textSize="20dp"
                 android:layout_centerVertical="true"
-                android:layout_alignParentStart="true" />
-
-            <RelativeLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:gravity="right"
-                android:id="@+id/layout_exchange"
-                android:layout_gravity="center_horizontal"
-                android:layout_alignParentRight="true">
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:gravity="right"
-                    android:id="@+id/text_discount_price"
-                    android:textColor="#000000"
-                    android:text="1,000"
-                    android:textSize="30sp"/>
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="원"
-                    android:textSize="20dp"
-                    android:layout_centerVertical="true"
-                    android:layout_toEndOf="@+id/text_discount_price" />
-            </RelativeLayout>
+                android:layout_toEndOf="@+id/text_discount_price" />
         </RelativeLayout>
-    </LinearLayout>
+    </RelativeLayout>
+</LinearLayout>
 
     <View
         android:layout_width="match_parent"
@@ -184,73 +184,5 @@
 
     </LinearLayout>
 
-<<<<<<< HEAD
-=======
-    <EditText
-        android:id="@+id/product_price"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:inputType="numberDecimal"
-        android:layout_marginTop="15dp"
-        android:textSize="20sp"
-        android:ems="7"
-        android:background="@null"
-        android:hint="구매할 상품의 가격"
-        android:layout_below="@+id/dotline_1"
-        android:layout_alignParentStart="true"
-        android:layout_marginStart="30dp" />
-
-    <TextView
-        android:layout_width="120dp"
-        android:layout_height="25dp"
-        android:text="환율 변환 값"
-        android:layout_marginTop="45dp"
-        android:textColor="#000"
-        android:textSize="20sp"
-        android:layout_below="@+id/product_price"
-        android:layout_alignStart="@+id/product_price"
-        android:id="@+id/textView2" />
-
-    <Spinner
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/currency_spinner"
-        android:layout_alignTop="@+id/product_price"
-        android:layout_alignEnd="@+id/dotline_2"
-        android:layout_toEndOf="@+id/product_price"
-        android:layout_above="@+id/textView2" />
-
-    <TextView
-        android:layout_width="150dp"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceSmall"
-        android:text="null"
-        android:textSize="30sp"
-        android:textColor="#000"
-        android:gravity="center"
-        android:id="@+id/changed_price"
-        android:layout_alignBottom="@+id/textView2"
-        android:layout_toStartOf="@+id/textView3" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginRight="20dp"
-        android:textAppearance="?android:attr/textAppearanceSmall"
-        android:text="원"
-        android:textSize="20dp"
-        android:id="@+id/textView3"
-        android:layout_alignBottom="@+id/changed_price"
-        android:layout_alignParentEnd="true" />
-
-    <ListView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/listView"
-        android:layout_below="@+id/dotline_2"
-        android:layout_alignStart="@+id/total_background"
-        android:layout_above="@+id/total_background" />
-
-
->>>>>>> master
 </RelativeLayout>
+
