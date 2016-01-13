@@ -18,6 +18,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="해외결제 계산기"
+            android:textColor="#000"
             android:gravity="center"
             android:textSize="40sp"/>
     </LinearLayout>
@@ -50,6 +51,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:hint="구매할 상품의 가격"
+            android:inputType="numberDecimal"
             android:id="@+id/edit_price"
             android:background="@android:color/transparent"
             android:textSize="20sp"/>
@@ -133,7 +135,7 @@
         android:id="@+id/listview_cardlist"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_alignTop="@id/dotline_2"
+        android:layout_below="@id/dotline_2"
         android:layout_alignBottom="@id/result"/>
 
     <LinearLayout
@@ -159,7 +161,7 @@
                 android:text="원"
                 android:textColor="#fff"
                 android:textSize="20sp"
-                android:id="@+id/textView"
+                android:id="@+id/text_won"
                 android:layout_centerVertical="true"
                 android:layout_alignParentEnd="true" />
 
@@ -169,9 +171,10 @@
                 android:textSize="40sp"
                 android:textColor="#fff"
                 android:text="1,010"
-                android:id="@+id/textView3"
+                android:layout_marginRight="10dp"
+                android:id="@+id/text_chipprice"
                 android:layout_alignParentTop="true"
-                android:layout_toStartOf="@+id/textView" />
+                android:layout_toStartOf="@+id/text_won" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -179,7 +182,7 @@
                 android:textSize="20sp"
                 android:textColor="#fff"
                 android:text="최저가격"
-                android:id="@+id/textView2"
+                android:id="@+id/text_chippricename"
                 android:layout_centerVertical="true"
                 android:layout_alignParentStart="true" />
 
