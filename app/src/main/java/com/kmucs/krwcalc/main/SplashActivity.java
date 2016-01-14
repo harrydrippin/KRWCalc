@@ -1,6 +1,7 @@
 package com.kmucs.krwcalc.main;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.Handler;
@@ -14,10 +15,13 @@ import com.kmucs.krwcalc.lib.ERParser;
  */
 public class SplashActivity extends AppCompatActivity {
 
+    SharedPreferences pref;
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
+        pref = getApplicationContext().getSharedPreferences("pref",MODE_PRIVATE);
 
     }
 
@@ -34,14 +38,18 @@ public class SplashActivity extends AppCompatActivity {
             float mJPY = ERParser.getExchangeRate("JPY");
             float mCNY = ERParser.getExchangeRate("CNY");
 
-            String result = mUSD + "" + mJPY + "" + mCNY;
+            String result = mUSD + "," + mJPY + "," + mCNY;
             return result;
         }
 
         @Override
         protected void onPostExecute(String result) {
             super.onPostExecute(result);
-
+            SharedPreferences.Editor editor = pref.edit();
+            editor.putString("exchange_rate", result);
+            editor.commit();
+            Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+            startActivity(intent);
         }
 
         @Override

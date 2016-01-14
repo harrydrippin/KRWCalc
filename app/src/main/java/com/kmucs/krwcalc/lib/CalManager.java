@@ -1,6 +1,7 @@
 package com.kmucs.krwcalc.lib;
 
 import android.content.Context;
+import android.content.SharedPreferences;
 
 import java.util.ArrayList;
 
@@ -30,7 +31,10 @@ public class CalManager {
         ArrayList result = new ArrayList();
 
         ERParser mParser = new ERParser();
-        float mExRate = mParser.getExchangeRate();
+        SharedPreferences pref = m.getApplicationContext().getSharedPreferences("pref", Context.MODE_PRIVATE);
+        String exrate = pref.getString("exchange_rate", "^^^");
+        String[] exRateArray = exrate.split(",");
+        float mExRate = Float.parseFloat(exRateArray[0]);
 
         // 환율 적용 금액
         int mResultExchanged = (int)(money * mExRate);
