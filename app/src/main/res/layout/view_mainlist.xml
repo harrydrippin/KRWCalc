@@ -6,7 +6,7 @@
     android:padding="20dp">
 
     <ImageView
-        android:id="@+id/mImage"
+        android:id="@+id/img_cardimg"
         android:layout_width="100dp"
         android:layout_height="50dp"
         android:src="@drawable/card_kookmin_line" />
@@ -21,22 +21,22 @@
     </LinearLayout>
 
     <TextView
-        android:id="@+id/mText"
+        android:id="@+id/txt_cardname"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="국민대학교 학생증 체크카드"
+        android:text="신한 VIVA 카드"
         android:gravity="right"
         android:textSize="18sp"
         android:textAppearance="?android:attr/textAppearanceLarge"
-        android:layout_alignTop="@+id/mImage"
-        android:layout_alignEnd="@+id/mPay" />
+        android:layout_alignTop="@id/img_cardimg"
+        android:layout_alignEnd="@+id/layout_pay" />
 
     <RelativeLayout
-        android:id="@+id/mPay"
+        android:id="@+id/layout_pay"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/mImage"
-        android:layout_toEndOf="@+id/mImage">
+        android:layout_alignBottom="@id/img_cardimg"
+        android:layout_toEndOf="@id/img_cardimg">
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -61,7 +61,7 @@
                 android:textSize="20sp"
                 android:textColor="#252525"
                 android:layout_alignParentTop="true"
-                android:layout_toStartOf="@+id/textView4" />
+                android:layout_toStartOf="@+id/txt_won" />
 
             <TextView
                 android:layout_height="wrap_content"
@@ -69,7 +69,7 @@
                 android:text="원"
                 android:layout_centerVertical="true"
                 android:layout_alignParentEnd="true"
-                android:id="@+id/textView4" />
+                android:id="@+id/txt_won" />
 
         </RelativeLayout>
 
