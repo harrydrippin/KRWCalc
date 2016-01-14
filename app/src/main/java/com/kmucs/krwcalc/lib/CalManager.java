@@ -29,7 +29,6 @@ public class CalManager {
     // 환율 적용 금액, 결제망 수수료, 카드사 수수료, 1원 단위 내림, 예상 결제 금액
     public ArrayList calculate(Card card, float money) {
         ArrayList result = new ArrayList();
-
         ERParser mParser = new ERParser();
         SharedPreferences pref = m.getApplicationContext().getSharedPreferences("pref", Context.MODE_PRIVATE);
         String exrate = pref.getString("exchange_rate", "^^^");
