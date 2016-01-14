@@ -43,7 +43,6 @@ public class ERParser {
 
         boolean flag = false;
 
-
         if (Integer.parseInt(hh) < 8) flag = true;
         else if (Integer.parseInt(hh) == 8 & Integer.parseInt(mm) < 40) flag = true;
 
