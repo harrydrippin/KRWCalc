@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    tools:context="com.kmucs.krwcalc.main.SpecialCardSelectActivity">
+    ​
+    <RelativeLayout
+        android:id="@+id/layout_title"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:gravity="center">
+        <TextView
+            android:id="@+id/text_titlename"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:text="특별 혜택 카드 확인"
+            android:textColor="#000000"
+            android:gravity="center"
+            android:textSize="50sp"/>
+    </RelativeLayout>
+    ​
+    ​
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:layout_below="@id/layout_title"
+        android:background="@drawable/main_dotline_1"
+        android:id="@+id/dotline_1" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/dotline_1"
+        android:layout_above="@+id/btn_confirm"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="카드가 다음 중 하나인가요?"
+            android:layout_marginBottom="20dp"
+            android:textSize="20sp"
+            android:layout_above="@+id/radioGroup"
+            android:layout_centerHorizontal="true" />
+        <RadioGroup
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/radioGroup">
+            <RadioButton
+                android:id="@+id/radbtn_vivag"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:text="하나카드 'VIVA G 플래티넘 체크카드'" />
+            <RadioButton
+                android:id="@+id/radbtn_globalpay"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:layout_marginTop="20dp"
+                android:text="하나카드 '글로벌 페이 체크카드'" />
+            <RadioButton
+                android:id="@+id/radbtn_bcglobal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:layout_marginTop="20dp"
+                android:text="BC카드 '비씨 글로벌 카드'" />
+            <RadioButton
+                android:id="@+id/radbtn_none"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:layout_marginTop="20dp"
+                android:text="해당 사항 없음" />
+        </RadioGroup>
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="#c55f59"
+        android:id="@+id/btn_confirm"
+        android:layout_alignParentBottom="true">
+        <TextView
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:id="@+id/txt_confirm"
+            android:text="확인"
+            android:textSize="32sp"
+            android:textColor="#FFFFFF"/>
+    </RelativeLayout>
+</RelativeLayout>

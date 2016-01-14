@@ -100,4 +100,35 @@ public class CardManager {
 
         return result;
     }
+
+    public int getNetDrawable(NetCompany mNetComp) {
+
+        String resID = "@drawable/net_";
+
+        switch(mNetComp) {
+            case AMEX:
+                resID += "amex";
+                break;
+            case BCGLOBAL:
+                resID += "bcglobal";
+                break;
+            case JCB:
+                resID += "jcb";
+                break;
+            case MASTER:
+                resID += "master";
+                break;
+            case UNIONPAY:
+                resID += "unionpay";
+                break;
+            case VISA:
+                resID += "visa";
+                break;
+        }
+
+        String packName = mContext.getPackageName();
+        int result = mContext.getResources().getIdentifier(resID, "drawable", packName);
+
+        return result;
+    }
 }
