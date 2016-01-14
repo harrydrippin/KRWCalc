@@ -18,6 +18,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".main.MainActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".main.CardMgeActivity" android:screenOrientation="portrait" />
     </application>
 
 </manifest>

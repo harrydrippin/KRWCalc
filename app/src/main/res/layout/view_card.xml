@@ -7,6 +7,7 @@
     android:layout_height="200dp">
 
     <TextView
+        android:id="@+id/text_cardtitle"
         android:layout_width="150dp"
         android:layout_height="wrap_content"
         android:text="국민대학교 학생증 체크카드"
@@ -17,8 +18,38 @@
         android:textColor="#252525"/>
 
     <ImageView
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:src="@drawable/card_busan"
+        android:id="@+id/img_cardcomp"
+        android:layout_alignParentTop="true"
+        android:layout_alignEnd="@+id/img_cardnet" />
+
+    <ImageView
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:src="@drawable/ic_chip"
+        android:scaleType="fitXY"
+        android:layout_centerVertical="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/imageView" />
+
+    <TextView
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:text="체크카드"
+        android:textSize="15dp"
+        android:id="@+id/text_checkcard"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true" />
+
+    <ImageView
+        android:layout_width="90dp"
+        android:layout_height="45dp"
+        android:src="@drawable/net_master"
+        android:id="@+id/img_cardnet"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true" />
 
 
 </RelativeLayout>

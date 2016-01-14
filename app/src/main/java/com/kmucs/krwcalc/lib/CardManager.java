@@ -1,6 +1,7 @@
 package com.kmucs.krwcalc.lib;
 
 import android.content.Context;
+import android.graphics.drawable.Drawable;
 import android.util.Log;
 
 /**
@@ -36,5 +37,67 @@ public class CardManager {
 
     public String getCardInfo() {
         return dbManager.getData();
+    }
+
+    public int getCardDrawable(CardCompany mCardComp, boolean isLined) {
+
+        String resID = "@drawable/card_";
+
+        switch(mCardComp) {
+            case SHINHAN:
+                resID += "shinhan";
+                break;
+            case HYUNDAI:
+                resID += "hyundai";
+                break;
+            case SAMSUNG:
+                resID += "samsung";
+                break;
+            case LOTTE:
+                resID += "lotte";
+                break;
+            case KOOKMIN:
+                resID += "kookmin";
+                break;
+            case HANA:
+                resID += "hana";
+                break;
+            case WOORI:
+                resID += "woori";
+                break;
+            case BC:
+                resID += "bc";
+                break;
+            case NH:
+                resID += "nh";
+                break;
+            case CITI:
+                resID += "citi";
+                break;
+            case SC:
+                resID += "sc";
+                break;
+            case BUSAN:
+                resID += "busan";
+                break;
+            case DAEGU:
+                resID += "daegu";
+                break;
+            case GYUNGNAM:
+                resID += "gyungnam";
+                break;
+            case IBK:
+                resID += "ibk";
+                break;
+        }
+
+        if(isLined) {
+            resID += "_line";
+        }
+
+        String packName = mContext.getPackageName();
+        int result = mContext.getResources().getIdentifier(resID, "drawable", packName);
+
+        return result;
     }
 }

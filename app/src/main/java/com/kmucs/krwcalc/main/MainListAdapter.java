@@ -11,6 +11,8 @@ import android.widget.TextView;
 
 import com.kmucs.krwcalc.R;
 import com.kmucs.krwcalc.lib.Card;
+import com.kmucs.krwcalc.lib.CardCompany;
+import com.kmucs.krwcalc.lib.CardManager;
 
 import java.util.ArrayList;
 
@@ -60,7 +62,8 @@ public class MainListAdapter extends BaseAdapter {
         }
 
         Card mCard = mCardData.get(position);
-        mViewHolder.mImageView.setImageDrawable(mContext.getResources().getDrawable(R.drawable.card_kookmin_line, null));
+        CardManager mCardManager = new CardManager(mContext);
+        mViewHolder.mImageView.setImageResource(mCardManager.getCardDrawable(CardCompany.DAEGU, true));
         mViewHolder.mCardName.setText("국민대학교 학생증 체크카드");
         mViewHolder.mCardPay.setText("1,000");
 
